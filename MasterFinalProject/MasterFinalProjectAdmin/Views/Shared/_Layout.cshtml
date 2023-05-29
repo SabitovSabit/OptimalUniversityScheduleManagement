@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex">
+    <title>@ViewData["Title"] - Manager</title>
+    <link rel="icon" href="~/images/logo-dark.png" type="image/x-icon" />
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+
+    <div id="overlay" style="display: none;">
+        <div class="spinner-border" role="status">
+        </div>
+    </div>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center justify-content-between">
+
+        <a href="/" class="logo d-flex align-items-center">
+            <img src="~/images/download.png">
+        </a>
+        <i class="fas fa-bars toggle-sidebar-btn"></i>
+
+    </header>
+
+    <!-- ======= Sidebar ======= -->
+    @await Html.PartialAsync("_Menu")
+
+    <main id="main" class="main">
+
+        <div class="pagetitle">
+            <h1>@ViewData["Title"]</h1>
+        </div>
+
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="card">
+                        <div class="card-body p-3">
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-angle-double-up"></i></a>
+
+
+    <script src="~/js/jquery-3.6.0.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/vue.min.js"></script>
+    @*<script src="~/js/notify.min.js"></script>
+    <script src="~/js/moment.min.js"></script>
+    <script src="~/js/axios.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>*@
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

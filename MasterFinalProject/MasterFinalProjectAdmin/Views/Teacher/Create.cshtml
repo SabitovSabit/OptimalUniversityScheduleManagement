@@ -1,0 +1,33 @@
+﻿@model Teacher
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Yarat</h2>
+
+<h4>Müəllimlər</h4>
+<hr />
+<div class="row">
+    <div class="form-group col-md-4">
+        <form asp-action="Create" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+         
+            
+         
+            <div class="form-group">
+                <input type="submit" value="Create" class="form-control btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-default">Siyahıya qayıt</a>
+</div>
