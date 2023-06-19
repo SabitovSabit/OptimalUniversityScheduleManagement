@@ -15,8 +15,8 @@ namespace MasterFinalProjectAdmin.Controllers
 
     public class ClassController : Controller
     {
-        private readonly IClassNamesRepository _repository;
-        public ClassController(IClassNamesRepository repository)
+        private readonly IClassNameRepository _repository;
+        public ClassController(IClassNameRepository repository)
         {
             _repository = repository;
         }
@@ -63,6 +63,7 @@ namespace MasterFinalProjectAdmin.Controllers
             }
             return NotFound();
         }
+        [Route("[action]/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             if (await _repository.GetById(id) != null)

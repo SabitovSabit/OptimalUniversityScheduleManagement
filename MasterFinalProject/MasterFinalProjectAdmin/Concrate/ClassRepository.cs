@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace MasterFinalProjectAdmin.Concrate
 {
-    public class ClassRepository : IClassNamesRepository
+    public class ClassRepository : IClassNameRepository
     {
         private readonly SchoolDb _db;
         public ClassRepository(SchoolDb db)
@@ -61,6 +61,8 @@ namespace MasterFinalProjectAdmin.Concrate
             if (existingStudent != null)
             {
                 existingStudent.Name = _object.Name;
+                existingStudent.KafedraId=_object.KafedraId;
+
 
                 await _db.SaveChangesAsync();
                 return _object;

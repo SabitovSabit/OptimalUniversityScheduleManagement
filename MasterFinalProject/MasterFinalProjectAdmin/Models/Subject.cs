@@ -11,8 +11,12 @@ namespace MasterFinalProjectAdmin.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        [MaxLength(30)]
+        [MaxLength(50)]
         public string Name { get; set; }
-        public virtual ICollection<Scheduler> Schedulers { get; set; }
+        public virtual ICollection<TeacherSubject> TeacherSubjects { get; set; }
+        public virtual ICollection<ClassSubject> ClassSubjects { get; set; }
+
+        public virtual ICollection<TimeDayClass> TimeDayClasses { get; set; }
+
     }
 }

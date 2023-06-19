@@ -1,0 +1,169 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MasterFinalProjectAdmin
+build_property.RootNamespace = MasterFinalProjectAdmin
+build_property.ProjectDir = C:\Users\Sabitov\source\repos\MasterDiplomaProject\MasterFinalProject\MasterFinalProjectAdmin\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Sabitov\source\repos\MasterDiplomaProject\MasterFinalProject\MasterFinalProjectAdmin
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/ClassSubject/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3NTdWJqZWN0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/ClassSubject/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3NTdWJqZWN0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/ClassSubject/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3NTdWJqZWN0XFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Class/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Class/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Class/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xhc3NcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Faculty/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdWx0eVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Faculty/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdWx0eVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Faculty/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdWx0eVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Kafedra/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2FmZWRyYVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Kafedra/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2FmZWRyYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Kafedra/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2FmZWRyYVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Room/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Room/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Room/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Shared/_Menu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZW51LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Student/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Student/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Student/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Subject/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViamVjdFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Subject/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViamVjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Subject/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3ViamVjdFxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/TeacherSubject/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhY2hlclN1YmplY3RcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/TeacherSubject/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhY2hlclN1YmplY3RcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/TeacherSubject/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhY2hlclN1YmplY3RcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Teacher/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhY2hlclxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Teacher/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhY2hlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Teacher/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhY2hlclxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/TimeDayClass/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGltZURheUNsYXNzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/TimeDayClass/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGltZURheUNsYXNzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/TimeDayClass/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGltZURheUNsYXNzXFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sabitov/source/repos/MasterDiplomaProject/MasterFinalProject/MasterFinalProjectAdmin/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-s8k842a0h4

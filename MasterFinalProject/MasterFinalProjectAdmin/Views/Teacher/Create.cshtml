@@ -1,4 +1,5 @@
-﻿@model Teacher
+﻿@using MasterFinalProjectAdmin.VModel;
+@model TeacherVM
 
 @{
     ViewData["Title"] = "Create";
@@ -13,16 +14,30 @@
         <form asp-action="Create" method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
+            <div class="form-group mb-3">
+                <label asp-for="Name" class="control-label">Adı</label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-         
-            
-         
+            <div class="form-group mb-3">
+                <label asp-for="Kafedra" class="control-label">Kafedra Adı</label>
+                @Html.DropDownList("KafedraId", (IEnumerable<SelectListItem>)ViewBag.Kafedras, null, new { @class ="form-control" })
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Email" class="control-label">Mail ünvanı</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <select asp-for="RoleTeacher" class="form-control" asp-items="new SelectList(ViewBag.Roles)"></select>
+                <span asp-validation-for="RoleTeacher" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <input asp-for="Password" class="form-control form-control-lg" placeholder="Password">
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="form-control btn btn-default" />
+                <input type="submit" value="Yarat" class="form-control btn btn-default" />
             </div>
         </form>
     </div>

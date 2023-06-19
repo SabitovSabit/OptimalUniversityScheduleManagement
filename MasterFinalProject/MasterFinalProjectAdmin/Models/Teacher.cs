@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -10,11 +11,15 @@ namespace MasterFinalProjectAdmin.Models
     {
         [Key]
         public int Id { get; set; }
+        
+        public string Email { get; set; }
         [Required]
         [MaxLength(30)]
-        public string Name { get; set; }
-        public virtual ICollection<Scheduler> Schedulers { get; set; }
+        public string? Name { get; set; }     
         public int KafedraId { get; set; }
-        public Kafedra Faculty { get; set; }
+        public Kafedra? Kafedra { get; set; }
+        public virtual ICollection<ClassTeacher> ClassTeachers { get; set; }
+        public virtual ICollection<TimeDayClass> TimeDayClasses { get; set; }
+
     }
 }

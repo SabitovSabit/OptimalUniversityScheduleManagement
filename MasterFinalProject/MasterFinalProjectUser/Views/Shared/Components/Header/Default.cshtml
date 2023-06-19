@@ -1,0 +1,65 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@inject UserManager<AppUser> userManager;
+@inject SignInManager<AppUser> signInManager;
+
+<header style="background:#b66f07">
+
+    <div class="header__top">
+        <ul class="menu">
+            <li class="menu__item menu__item--login"><a asp-controller="Notification" asp-action="Index"><i class="fa fa-bell"></i></a></li>
+            <li class="menu__item menu__item--login"><a asp-controller="Home" asp-action="Index">Ana səhifə</a></li>
+
+        </ul>
+        <ul class="menu">
+
+            @if (signInManager.IsSignedIn(User))
+            {
+                <li class="menu__item menu__item--login"><a asp-controller="Account" asp-action="Logout">Çıxış</a></li>
+            }
+            else
+            {
+                <li class="menu__item menu__item--login"><a asp-controller="Account" asp-action="Login">Daxil ol</a></li>
+            }
+
+            <li class="menu__item menu__item--login">
+                <a class="nav-link" asp-controller="Administrator" asp-action="Dashboard">
+                    Admin səhifəsi
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <nav style="background:#A4000B">
+        <ul class="nav__menu">
+
+            <li class="nav__menu-item">
+                Struktur
+                <ul class="nav__dropdown">
+                    <li class="nav__dropdown-item">
+                        <a asp-controller="Course" asp-action="Index">İxtisaslar</a>
+                    </li>
+                    <li class="nav__dropdown-item">
+                        <a asp-controller="Department" asp-action="Index">Kafedralar</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav__menu-item">
+                <a asp-controller="Elibrary" asp-action="Index">
+                    İşçi heyəti
+                </a>
+            </li>
+
+            <li class="nav__menu-item">
+                <a asp-controller="Elibrary" asp-action="Index">
+                    E-kitabxana
+                </a>
+            </li>
+
+            <li class="nav__menu-item">
+                <a asp-controller="Blog" asp-action="Index">
+                    Xəbərlər
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>

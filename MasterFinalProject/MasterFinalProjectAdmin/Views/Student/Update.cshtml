@@ -13,12 +13,13 @@
         <form asp-action="Update"  method="post" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Name" class="control-label">Qrup Ad</label>
+            <div class="form-group mb-3">
+                <label asp-for="Name" class="control-label">Tələbə Adı</label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-3">
+                <label asp-for="Name" class="control-label">Qrup Ad</label>
                 @Html.DropDownList("ClassId", (IEnumerable<SelectListItem>)ViewBag.Classes, null, new { @class ="form-control" })
             </div>
             <div class="form-group">

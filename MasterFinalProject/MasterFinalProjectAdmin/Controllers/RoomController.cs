@@ -71,7 +71,7 @@ namespace MasterFinalProjectAdmin.Controllers
             }
             return NotFound();
         }
-        [Route("[action]")]
+        [Route("[action]/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             if (await _repository.GetById(id) != null)

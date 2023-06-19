@@ -273,3 +273,4 @@ C:\Users\Sabitov\source\repos\MasterDiplomaProject\MasterFinalProject\MasterFina
 C:\Users\Sabitov\source\repos\MasterDiplomaProject\MasterFinalProject\MasterFinalProjectAdmin\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\Sabitov\source\repos\MasterDiplomaProject\MasterFinalProject\MasterFinalProjectAdmin\bin\Debug\net7.0\Mono.TextTemplating.dll
 C:\Users\Sabitov\source\repos\MasterDiplomaProject\MasterFinalProject\MasterFinalProjectAdmin\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\Sabitov\source\repos\MasterDiplomaProject\MasterFinalProject\MasterFinalProjectAdmin\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

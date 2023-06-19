@@ -1,9 +1,12 @@
 ﻿using MasterFinalProjectAdmin.Data;
 using MasterFinalProjectAdmin.Interface;
 using MasterFinalProjectAdmin.Models;
+using MasterFinalProjectAdmin.VModel;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Rewrite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,11 +18,21 @@ namespace MasterFinalProjectAdmin.Controllers
     public class StudentController : Controller
     {
         private IStudentRepository<Student> _repository;
-        private readonly SchoolDb _db;
-        public StudentController(IStudentRepository<Student> repository, SchoolDb db)
+        private readonly IWebHostEnvironment _env;
+        private readonly UserManager<AppUser> _userManager;
+        private readonly SignInManager<AppUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        public StudentController(IStudentRepository<Student> repository,
+                                   IWebHostEnvironment env,
+                                 UserManager<AppUser> userManager,
+                                 SignInManager<AppUser> signInManager,
+                                 RoleManager<IdentityRole> roleManager)
         {
-            _db = db;
             _repository = repository;
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _roleManager = roleManager;
+            _env = env;
         }
         public async Task<IActionResult> Index()
         {
@@ -37,10 +50,39 @@ namespace MasterFinalProjectAdmin.Controllers
         }
         [HttpPost]
         [Route("[action]")]
-        public async Task<IActionResult> Create(Student student)
+        public async Task<IActionResult> Create(StudentVM student)
         {
 
-            await _repository.Create(student);
+            AppUser user = new AppUser()
+            {
+                Email = student.Email,
+                UserName = student.Name,
+                Fullname = student.Name
+            };
+            IdentityResult identityResult = await _userManager.CreateAsync(user, student.Password);
+            if (!identityResult.Succeeded)
+            {
+                foreach (var error in identityResult.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+                return View();
+            }
+            var roleExist = await _roleManager.RoleExistsAsync("Member");
+            if (!roleExist)
+            {
+                 await _roleManager.CreateAsync(new IdentityRole("Member"));
+            }
+            await _userManager.AddToRoleAsync(user, "Member");
+            await _signInManager.SignInAsync(user, true);
+            Student studentEntity = new Student()
+            {
+                Name = student.Name,
+                ClassName = student.ClassName,
+                ClassNameId = student.ClassNameId,
+                Email=student.Email,
+            };
+            await _repository.Create(studentEntity);
             return RedirectToAction("Index");
 
         }
@@ -63,7 +105,6 @@ namespace MasterFinalProjectAdmin.Controllers
             }
             return NotFound();
         }
-        [HttpDelete]
         [Route("[action]/{id}")]
         public async Task<IActionResult> Delete(int id)
         {

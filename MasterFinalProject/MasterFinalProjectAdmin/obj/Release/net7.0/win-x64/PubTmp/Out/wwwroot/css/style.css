@@ -1,0 +1,100 @@
+/*Scroll*/
+
+
+
+
+*::-webkit-scrollbar {
+    width: 1em;
+}
+
+*::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #b3b3b3 !important;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #fec00b !important;
+}
+
+/*Focus*/
+textarea:focus,
+select:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+input[type="checkbox"]:focus,
+.uneditable-input:focus {
+    box-shadow: none;
+    border-color: #c0c0c0;
+    border: 1px solid rgba(0,0,0,.25);
+}
+
+input[type="checkbox"] {
+    border-radius: 8px;
+}
+
+button:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none !important;
+}
+.phone {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.forcons {
+    position: absolute;
+    top: 9%;
+    left: 31%;
+    width: 38%;
+    height: 262px;
+}
+/*Modals*/
+.modal-header {
+    background: #4e4e4e;
+    color: #ffc107;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+}
+
+.modal-content {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+}
+
+.btn-close {
+    color: #ffc107;
+    background: none;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+}
+
+.btn-close:hover {
+    color: #ffc107;
+    opacity: 1;
+}
+
+.btn-close:focus {
+    box-shadow: none;
+}

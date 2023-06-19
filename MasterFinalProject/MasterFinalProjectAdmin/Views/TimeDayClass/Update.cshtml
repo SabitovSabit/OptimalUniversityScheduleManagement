@@ -1,0 +1,209 @@
+﻿@using MasterFinalProjectAdmin.Helpers;
+@model TimeDayClass
+
+@{
+    ViewData["Title"] = "Update";
+}
+
+<h2>Yenile</h2>
+
+<h4>Cədvəl</h4>
+<hr />
+<div class="row" id="search-vue">
+    <div class="form-group col-md-4">
+        <form asp-action="Update" method="post" enctype="multipart/form-data">
+             <input type="hidden" asp-for="Id" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*  <div class="form-group mb-3">
+            <label asp-for="ClassName" class="control-label">Qrup</label>
+            @Html.DropDownList("ClassNameId", (IEnumerable<SelectListItem>)ViewBag.Classes, null, new { @class ="form-control" })
+            </div>*@
+            <div>
+                <label asp-for="ClassName" class="control-label">Qrup</label>
+                <select v-on:change="LoadSubjects($event)" asp-for="ClassNameId" class="form-control custom-select ps-5">
+                    <option selected value="@Model.ClassNameId">@Model.ClassName.Name</option>
+                    @foreach (var item in ViewBag.Classes)
+                    {
+                        <option value="@item.Value">@item.Text</option>
+                    }
+                </select>
+            </div>
+            <div class="form-icon position-relative mb-3">
+                <label asp-for="Subject" class="control-label">Fənn</label>
+                <select v-on:change="LoadTeachers($event)" asp-for="SubjectId" class="form-control custom-select ps-5">
+                    <option selected value="@Model.SubjectId">@Model.Subject.Name</option>
+                    <option v-for="item in subjects" :value="item.value">{{item.text}}</option>
+                </select>
+            </div>
+            @*<div class="form-group mb-3">
+            <label asp-for="Subject" class="control-label">Fenn</label>
+            @Html.DropDownList("SubjectId", (IEnumerable<SelectListItem>)ViewBag.Subjects, null, new { @class ="form-control" })
+            </div>*@
+            <div class="form-icon position-relative mb-3">
+                <label asp-for="Teacher" class="control-label">Müəllim</label>
+                <select v-on:change="LoadDays()" asp-for="TeacherId" class="form-control custom-select ps-5">
+                    <option selected value="@Model.TeacherId">@Model.Teacher.Name</option>
+                    <option v-for="item in teachers" :value="item.value">{{item.text}}</option>
+                </select>
+            </div>
+            @* <div class="form-group mb-3">
+            <label asp-for="Teacher" class="control-label">Muellim</label>
+            @Html.DropDownList("TeacherId", (IEnumerable<SelectListItem>)ViewBag.Teachers, null, new { @class ="form-control" })
+            </div>*@
+            <div class="form-icon position-relative mb-3">
+                <label asp-for="Days" class="control-label">Gün</label>
+                <select v-on:change="LoadTimes()" asp-for="DaysId" class="form-control custom-select ps-5">
+                    <option selected value="@Model.DaysId">@Model.Days.Name</option>
+                    <option v-for="item in days" :value="item.value">{{item.text}}</option>
+                </select>
+            </div>
+            @* <div class="form-group mb-3">
+            <label asp-for="Days" class="control-label">Gun</label>
+            @Html.DropDownList("DaysId", (IEnumerable<SelectListItem>)ViewBag.Days, null, new { @class ="form-control" })
+            </div>*@
+
+            <div class="form-icon position-relative mb-3">
+                <label asp-for="TimeOfDay" class="control-label">Saat</label>
+                <select v-on:change="LoadRooms()" asp-for="TimeOfDayId" class="form-control custom-select ps-5">
+                    <option selected value="@Model.TimeOfDayId">@Model.TimeOfDay.Name</option>
+                    <option v-for="item in times" :value="item.value">{{item.text}}</option>
+                </select>
+            </div>
+            @* <div class="form-group mb-3">
+            <label asp-for="TimeOfDay" class="control-label">Saat</label>
+            @Html.DropDownList("TimeOfDayId", (IEnumerable<SelectListItem>)ViewBag.Times, null, new { @class ="form-control" })
+            </div>*@
+            <div class="form-icon position-relative mb-3">
+                <label asp-for="Room" class="control-label">Otaq</label>
+                <select asp-for="RoomId" class="form-control custom-select ps-5">
+                    <option selected value="@Model.RoomId">@Model.Room.Name</option>
+                    <option v-for="item in rooms" :value="item.value">{{item.text}}</option>
+                </select>
+            </div>
+            @* <div class="form-group mb-3">
+            <label asp-for="Room" class="control-label">Otaq</label>
+            @Html.DropDownList("RoomId", (IEnumerable<SelectListItem>)ViewBag.Rooms, null, new { @class ="form-control" })
+            </div>*@
+
+
+
+            @* <div class="form-group">
+            <label asp-for="Kafedra.Name" class="control-label"></label>
+            <select asp-for="Kafedra.Name" class="form-control" asp-items="new SelectList(ViewBag.Kafedras)"></select>
+            <span asp-validation-for="Kafedra.Name" class="text-danger"></span>
+            </div>*@
+
+            <div class="mb-3 text-center">
+                <button class="btn btn-outline-primary mt-28" type="submit">Yenile</button>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Siyahıya Qayıt</a>
+</div>
+
+@section Scripts {
+    <script>
+        var Vue = new Vue({
+            el: '#search-vue',
+            data: {
+
+                subjects: [],
+                teachers: [],
+                days: [],
+                times: [],
+                rooms: [],
+                current: 1,
+                textLoad: true,
+                submitLoad: false
+            },
+            methods: {
+                LoadSubjects: function (event) {
+                    Vue.subjects = [];
+                    $.ajax({
+                        url: '@Url.Action("GetSubjectByClass", "TimeDayClass")',
+                        type: "GET",
+                        data: { Id: event.target.value },
+                        success: function (r) {
+                            Vue.subjects = r;
+                            $('#overlay').fadeOut();
+                        }
+                    });
+                },
+                LoadTeachers: function (event) {
+                    Vue.teachers = [];
+                    $.ajax({
+                        url: '@Url.Action("GetTeacherBySubject", "TimeDayClass")',
+                        type: "GET",
+                        data: { Id: event.target.value },
+                        success: function (r) {
+                            Vue.teachers = r;
+                            $('#overlay').fadeOut();
+                        }
+                    });
+                },
+                LoadDays: function (event) {
+                    Vue.days = [];
+                    $.ajax({
+                        url: '@Url.Action("GetDays", "TimeDayClass")',
+                        type: "GET",
+                        data: {
+                            ClassId: document.getElementsByName("ClassNameId")[0].value,
+                            TeacherId: document.getElementsByName("TeacherId")[0].value
+                        },
+                        success: function (r) {
+                            Vue.days = r;
+                            $('#overlay').fadeOut();
+                        }
+                    });
+                },
+
+                LoadTimes: function () {
+                    Vue.times = [];
+                    $.ajax({
+                        url: '@Url.Action("GetTimes", "TimeDayClass")',
+                        type: "GET",
+                        data: {
+                            ClassId: document.getElementsByName("ClassNameId")[0].value,
+                            TeacherId: document.getElementsByName("TeacherId")[0].value,
+                            DayId: document.getElementsByName("DaysId")[0].value,
+                        },
+                        success: function (r) {
+                            Vue.times = r;
+                            $('#overlay').fadeOut();
+                        }
+                    });
+                },
+                LoadRooms: function () {
+                    Vue.rooms = [];
+                    $.ajax({
+                        url: '@Url.Action("GetRooms", "TimeDayClass")',
+                        type: "GET",
+                        data: {
+                            TimeId: document.getElementsByName("TimeOfDayId")[0].value,
+                            DayId: document.getElementsByName("DaysId")[0].value
+                        },
+                        success: function (r) {
+                            Vue.rooms = r;
+                            $('#overlay').fadeOut();
+                        }
+                    });
+                },
+                Submit(e) {
+                    alert("salam");
+                    var data = {
+                        ClassNameId: document.getElementsByName("ClassNameId")[0].value,
+                        SubjectId: document.getElementsByName("SubjectId")[0].value
+                    };
+                    axios.get(
+                        '@Url.Action("Create", "TimeDayClass")',
+                        { params: data },
+                    )
+                }
+            }
+        });
+    </script>
+}

@@ -14,25 +14,22 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="form-group mb-3">
-                <label asp-for="Name" class="control-label"></label>
+                <label asp-for="Name" class="control-label">Ad</label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group mb-3">
+                <label asp-for="Kafedra" class="control-label">Kafedra Adı</label>
                 @Html.DropDownList("KafedraId", (IEnumerable<SelectListItem>)ViewBag.Kafedras, null, new { @class ="form-control" })
             </div>
-           @* <div class="form-group">
-                <label asp-for="Kafedra.Name" class="control-label"></label>
-                <select asp-for="Kafedra.Name" class="form-control" asp-items="new SelectList(ViewBag.Kafedras)"></select>
-                <span asp-validation-for="Kafedra.Name" class="text-danger"></span>
-            </div>*@
+        
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Yarat" class="btn btn-default" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Siyahıya Qayıt</a>
 </div>

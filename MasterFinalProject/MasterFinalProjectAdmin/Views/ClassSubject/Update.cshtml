@@ -1,0 +1,32 @@
+﻿@model ClassSubject
+@{
+    ViewData["Title"] = "update";
+}
+
+<h2>Yenilə</h2>
+
+<h4>Qrup-Fənn</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Update" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+             <div class="col-4 mb-3">
+            <label asp-for="ClassName" class="control-label">Qrup Adı</label>
+                @Html.DropDownList("ClassNameId", (IEnumerable<SelectListItem>)ViewBag.ClassNames, null, new { @class ="form-control" })
+        </div>
+        <div class="col-4 mb-3">
+            <label asp-for="SubjectId" class="control-label">Fənn Adı</label>
+                @Html.DropDownList("SubjectId", (IEnumerable<SelectListItem>)ViewBag.Subjects, null, new { @class ="form-control" })
+        </div>
+            <div class="form-group">
+                <input type="submit" value="Yenilə" class="btn btn-outline-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Geri Qayıt</a>
+</div>
