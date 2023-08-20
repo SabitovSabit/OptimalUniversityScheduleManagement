@@ -69,14 +69,14 @@ namespace MasterFinalProjectUser.Controllers
                 ModelState.AddModelError("", "Password or email is incorrect!!");
                 return View();
             }
-            return RedirectToAction("Index2", "Home");
+            return RedirectToAction("Index", "Home");
         }
        
         
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index2", "Home");
+            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult Subscribe()

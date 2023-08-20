@@ -20,6 +20,8 @@ namespace MasterFinalProjectAdmin.Controllers
         {
             _repository = repository;
         }
+        [HttpGet]
+        [Route("[action]")]
         public async Task<IActionResult> Index()
         {
             List<TimeDayClass> allClass=await _repository.GetAll();

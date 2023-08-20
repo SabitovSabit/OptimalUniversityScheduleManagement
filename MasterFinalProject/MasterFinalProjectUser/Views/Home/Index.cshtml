@@ -1,0 +1,168 @@
+﻿@using MasterFinalProjectUser.ViewModels;
+@using Microsoft.AspNetCore.Identity;
+@inject UserManager<AppUser> userManager;
+@inject SignInManager<AppUser> signInManager;
+@model SchedulerVM
+@{
+    ViewData["Title"] = "Index";
+    int count = 0;
+}
+
+
+<section id="slider-container" class="slider-area">
+    <div class="slider-owl owl-theme owl-carousel">
+
+        <!-- Start Slingle Slide -->
+        <div class="single-slide item" style="background-image: url(assets/img/slider/uni2.jpg);height:600px;">
+            <!-- Start Slider Content -->
+            <div class="slider-content-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 col-md-offset-left-5">
+                            <div class="slide-content-wrapper">
+                                <div class="slide-content">
+                                    <h1 style="font-size:100px;color:white">ALİ MƏKTƏB</h1>
+                                    <p style="font-size:55px">Optimal Dərs Cədvəli</p>
+                                    <a class="default-btn" style="background:#A4000B" asp-controller="Home" asp-action="Index">Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Start Slider Content -->
+        </div>
+        <!-- End Slingle Slide -->
+    </div>
+</section>
+<section style="margin-top:50px;margin-bottom:50px">
+    <h2 style="font-size:80px;color:#B66F07;text-align:center">Dərs Cədvəli</h2>
+    <div class="container-fluid">
+        @if (signInManager.IsSignedIn(User))
+        {
+            @if (Model.IsTeacher)
+            {
+                <div class="row" style="padding:20px">
+                    <table class="table" style="color: #B66F07;font-size: x-large;border: 3px solid;border-color:#A4000B">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Qrup
+                                </th>
+                                <th>
+                                    Fenn
+                                </th>
+                               
+                                <th>
+                                    Otaq
+                                </th>
+                                <th>
+                                    Gun
+                                </th>
+                                <th>
+                                    Saat
+                                </th>
+                                <th>
+                                    Saat
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (TimeDayClass item in Model.scheduers)
+                            {
+                                <tr>
+                                     <td>
+                                        @item.ClassName.Name
+                                    </td>
+                                    <td>
+                                        @item.Subject.Name
+                                    </td>
+                                   
+                                    <td>
+                                        @item.Room.Name
+                                    </td>
+                                    <td>
+                                        @item.Days.Name
+                                    </td>
+                                    <td>
+                                        @item.TimeOfDay.Name
+                                    </td>
+                                    <td>
+                                        @item.TimeOfDay.Time
+                                    </td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+
+                </div>
+            }
+            else
+            {
+                
+            <div class="row" style="padding:20px">
+                <table class="table" style="color: #B66F07;font-size: x-large;border: 3px solid;border-color:#A4000B">
+                    <thead>
+                        <tr>
+
+                            <th>
+                                Fenn
+                            </th>
+                            <th>
+                                Muellim
+                            </th>
+                            <th>
+                                Otaq
+                            </th>
+                            <th>
+                                Gun
+                            </th>
+                            <th>
+                                Saat
+                            </th>
+                            <th>
+                                Saat
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (TimeDayClass item in Model.scheduers)
+                        {
+                            <tr>
+
+                                <td>
+                                    @item.Subject.Name
+                                </td>
+                                <td>
+                                    @item.Teacher.Name
+                                </td>
+                                <td>
+                                    @item.Room.Name
+                                </td>
+                                <td>
+                                    @item.Days.Name
+                                </td>
+                                <td>
+                                    @item.TimeOfDay.Name
+                                </td>
+                                <td>
+                                    @item.TimeOfDay.Time
+                                </td>
+
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+              
+            </div>
+            }
+        }
+        else{
+            <h2 style="font-size:50px;color:#9c8f7d;text-align:center">Dərs Cədvəli ucun daxil olun</h2>
+        }
+    </div>
+</section>
+

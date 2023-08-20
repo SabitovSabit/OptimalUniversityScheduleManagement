@@ -26,7 +26,7 @@ namespace MasterFinalProjectUser.Controllers
             this.roleManager = roleManager;
         }
 
-        public async Task<IActionResult> Index2()
+        public async Task<IActionResult> Index()
         {
             AppUser appUsers = await userManager.GetUserAsync(User);
             List<TimeDayClass> scheduler = new List<TimeDayClass>();
